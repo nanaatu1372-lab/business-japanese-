@@ -1099,14 +1099,24 @@ const langConfig=[
 {key:'vi',flag:'🇻🇳',label:'Tiếng Việt',code:'vi-VN'},
 ];
 const spColors=['#1a3a5c','#065f46','#6d28d9','#991b1b'];
+let _voices=[];function _loadVoices(){try{_voices=window.speechSynthesis?speechSynthesis.getVoices():[]}catch(e){_voices=[]}}
+if(window.speechSynthesis){_loadVoices();try{speechSynthesis.onvoiceschanged=_loadVoices}catch(e){}}
+function _voiceFor(code){const l=code.toLowerCase(),p=l.split('-')[0];return _voices.find(v=>v.lang&&v.lang.toLowerCase().replace('_','-')===l)||_voices.find(v=>v.lang&&v.lang.toLowerCase().startsWith(p))||null}
+function _inApp(){return /Instagram|FBAN|FBAV|Line\/|TikTok|musical_ly/i.test(navigator.userAgent)}
+function _audioHelp(msg){let t=document.getElementById('audioHelp');if(!t){t=document.createElement('div');t.id='audioHelp';t.style.cssText='position:fixed;left:50%;bottom:16px;transform:translateX(-50%);z-index:9999;max-width:92vw;background:#1e293b;color:#fff;padding:12px 16px;border-radius:12px;font-size:.85rem;line-height:1.6;box-shadow:0 8px 24px rgba(0,0,0,.25)';t.onclick=()=>t.remove();document.body.appendChild(t)}t.innerHTML=msg+'<br><small style="opacity:.7">（タップで閉じる）</small>';clearTimeout(t._t);t._t=setTimeout(()=>t.remove(),9000)}
 function speak(text,code,btn){
-if(!window.speechSynthesis)return;
-window.speechSynthesis.cancel();
+if(!window.speechSynthesis||!window.SpeechSynthesisUtterance){_audioHelp(_inApp()?'🔇 InstagramやLINEの中のブラウザでは音声が出ません。右上の「…」→「ブラウザで開く」を選んで、SafariやChromeで開いてください。<br>Audio does not work in in-app browsers. Open this page in Safari or Chrome.':'🔇 このブラウザは音声読み上げに対応していません。SafariやChromeで開いてください。<br>This browser cannot read aloud. Please use Safari or Chrome.');return;}
+_loadVoices();
+const v=_voiceFor(code);
+if(!v&&_voices.length){_audioHelp('🔇 この端末に「'+code+'」の音声がありません。端末の設定 → 言語（読み上げ）で音声を追加すると聞けます。<br>No '+code+' voice on this device. Add it in your device speech settings.');}
+try{speechSynthesis.cancel()}catch(e){}
 document.querySelectorAll('.speak-btn.speaking').forEach(b=>b.classList.remove('speaking'));
 const u=new SpeechSynthesisUtterance(text.replace(/（[^）]*）/g,'').replace(/〜/g,'').trim());
-u.lang=code;u.rate=0.88;
+u.lang=code;u.rate=0.88;if(v)u.voice=v;
 if(btn){btn.classList.add('speaking');u.onend=u.onerror=()=>btn.classList.remove('speaking');}
-window.speechSynthesis.speak(u);
+let started=false;u.onstart=()=>{started=true};
+setTimeout(()=>{try{speechSynthesis.resume();speechSynthesis.speak(u)}catch(e){}},60);
+setTimeout(()=>{if(!started&&!speechSynthesis.speaking){if(btn)btn.classList.remove('speaking');_audioHelp(_inApp()?'🔇 アプリの中のブラウザでは音声が出ないことがあります。「…」→「ブラウザで開く」を選んでください。<br>Open in Safari/Chrome to hear audio.':'🔇 音が出ないときは：①マナーモード（消音スイッチ）を切る ②音量を上げる ③SafariかChromeで開く<br>No sound? Turn off silent mode, raise the volume, or use Safari/Chrome.')}},1800);
 }
 function sb(text,code,cls=''){
 const s=text.replace(/\\/g,'\\\\').replace(/'/g,"\\'").replace(/"/g,'&quot;');
