@@ -3,6 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="会議・メール・報告で使えるビジネス日本語を、音声と5か国語の訳つきで。第1課・第4課は無料。Business Japanese for meetings and emails, with audio and translations in English, Chinese, Korean and Vietnamese.">
+<meta property="og:title" content="ビジネス会話 完全版 — Business Japanese with audio">
+<meta property="og:description" content="会議・メールの日本語を音声つきで。第1課・第4課は無料 / Free lessons for meetings and emails">
+<meta property="og:type" content="website">
 <title>ビジネス会話 完全版</title>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
@@ -248,7 +252,13 @@ body{background:white}.lesson-pane,.pane,.section-group{display:block!important}
 <div class="hero">
 <h1>ビジネス会話 完全版<span>Business Conversation Complete Edition</span></h1>
 <div class="hero-flags">🇯🇵 🇺🇸 🇨🇳 🇰🇷 🇻🇳</div>
-<p class="hero-desc">🔊 音声ボタンをクリックして発音を確認 / Click 🔊 to hear pronunciation</p>
+<p class="hero-desc" style="font-size:1rem;opacity:1;font-weight:700;max-width:560px;margin:6px auto 0">会議・メール・報告で、そのまま使える日本語。</p>
+<p class="hero-desc">Japanese you can use at work tomorrow — meetings, emails and reports, with audio and translations.</p>
+<div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:14px">
+<a href="#lessons-start" onclick="startFree(event)" style="background:white;color:#0369a1;font-weight:700;padding:11px 20px;border-radius:10px;text-decoration:none">▶ 無料で第1課を始める / Start free</a>
+<a href="https://www.instagram.com/nihongosensei123/" target="_blank" rel="noopener" style="background:rgba(255,255,255,.18);border:1.5px solid rgba(255,255,255,.7);color:white;font-weight:700;padding:11px 20px;border-radius:10px;text-decoration:none">🏢 社員研修のご相談 / For companies</a>
+</div>
+<p class="hero-desc" style="margin-top:10px">🔊 音声ボタンで発音を確認できます / Tap 🔊 to hear pronunciation</p>
 </div>
 <div id="welcome-section" style="max-width:900px;margin:20px auto;padding:0 16px">
 <div style="background:white;border-radius:16px;border:1.5px solid #bae6fd;overflow:hidden;margin-bottom:16px">
@@ -270,7 +280,7 @@ body{background:white}.lesson-pane,.pane,.section-group{display:block!important}
 </div>
 </div>
 <div style="background:#fff7ed;border:1.5px solid #fed7aa;border-radius:12px;padding:14px 16px">
-<div style="font-size:0.9rem;font-weight:700;color:#c2410c;margin-bottom:8px">🔒 サブスク限定</div>
+<div style="font-size:0.9rem;font-weight:700;color:#c2410c;margin-bottom:8px">🔒 会員コース（準備中）</div>
 <div style="font-size:0.82rem;color:#475569;line-height:1.7">
 第2・3・5・6課<br>
 表現まとめ・会話練習<br>
@@ -298,23 +308,23 @@ body{background:white}.lesson-pane,.pane,.section-group{display:block!important}
 </div>
 <div style="display:flex;align-items:flex-start;gap:12px">
 <div style="width:26px;height:26px;border-radius:50%;background:#0891b2;color:white;display:flex;align-items:center;justify-content:center;font-size:0.78rem;font-weight:700;flex-shrink:0">5</div>
-<div style="font-size:0.84rem;color:#475569;padding-top:3px">サブスク登録後：<strong>会話練習・レベルチェック・認定書</strong>が利用可能</div>
+<div style="font-size:0.84rem;color:#475569;padding-top:3px">会員コース（準備中）では：<strong>会話練習・レベルチェック・認定書</strong>が使えるようになります</div>
 </div>
 </div>
 <div style="background:linear-gradient(135deg,#0369a1,#0891b2);color:white;border-radius:12px;padding:18px 20px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px">
 <div>
-<div style="font-size:1rem;font-weight:700;margin-bottom:2px">月額 ¥980 で全コンテンツ利用可能</div>
-<div style="font-size:0.78rem;opacity:0.85">いつでも解約可能 / Stripe決済対応</div>
+<div style="font-size:1rem;font-weight:700;margin-bottom:2px">会員コースを準備中です</div>
+<div style="font-size:0.78rem;opacity:0.85">第2・3・5・6課・会話練習・認定書。公開のお知らせはInstagramで / Members' course coming soon</div>
 </div>
-<button onclick="showSubModal()" style="background:white;color:#0369a1;border:none;border-radius:10px;padding:11px 24px;font-size:0.93rem;font-weight:700;cursor:pointer;font-family:inherit;white-space:nowrap">登録する →</button>
+<a href="https://www.instagram.com/nihongosensei123/" target="_blank" rel="noopener" style="background:white;color:#0369a1;border-radius:10px;padding:11px 24px;font-size:0.93rem;font-weight:700;text-decoration:none;white-space:nowrap">📷 フォローして お知らせを受け取る</a>
 </div>
 </div>
 </div>
 </div>
 <div class="qr-modal" id="subModal">
 <div class="qr-box" style="max-width:420px;width:94%">
-<h3 style="color:#0369a1;margin-bottom:6px">🔓 サブスクリプション登録</h3>
-<p style="font-size:0.82rem;color:#64748b;margin-bottom:16px">月額980円で全コンテンツをご利用いただけます</p>
+<h3 style="color:#0369a1;margin-bottom:6px">🔓 会員コース（準備中）</h3>
+<p style="font-size:0.82rem;color:#64748b;margin-bottom:16px">ログインして使える会員コースを準備しています。公開したらInstagramでお知らせします。</p>
 <div style="background:#f0faff;border-radius:10px;padding:14px;margin-bottom:16px">
 <div style="font-size:0.85rem;font-weight:700;color:#0891b2;margin-bottom:8px">含まれるコンテンツ</div>
 <div style="font-size:0.82rem;color:#475569;line-height:1.8">
@@ -323,22 +333,17 @@ body{background:white}.lesson-pane,.pane,.section-group{display:block!important}
 ✅ 第5課：依頼メール<br>
 ✅ 第6課：お詫びメール<br>
 ✅ 表現まとめ一覧<br>
-✅ AI会話練習（ロールプレイ）<br>
+✅ 会話練習（ロールプレイ）<br>
 ✅ レベルチェック（20問）<br>
 ✅ 認定書の発行
 </div>
 </div>
 <div style="background:#f0fdf4;border:1px solid #bbf7d0;border-radius:8px;padding:10px 14px;margin-bottom:16px;font-size:0.78rem;color:#065f46">
-✅ Stripe決済で安全にお支払いいただけます。Apple Pay・クレジットカード対応。いつでも解約可能です。
+ℹ️ 会員コースの料金と内容は、公開のときに このページでお知らせします。
 </div>
 <div style="display:flex;gap:8px;flex-wrap:wrap;justify-content:center">
-<a href="https://buy.stripe.com/4gM5kDfrMaso0r28f5aMU01" target="_blank"
-style="display:inline-block;background:linear-gradient(135deg,#0891b2,#29abe2);color:white;font-weight:700;font-size:0.93rem;padding:11px 22px;border-radius:10px;text-decoration:none">
-💳 月額¥980 で登録する
-</a>
-<button onclick="activateTestSub()" style="background:#065f46;color:white;border:none;border-radius:10px;padding:11px 22px;font-size:0.88rem;font-weight:700;cursor:pointer;font-family:inherit">
-🧪 テスト登録
-</button>
+<a href="https://www.instagram.com/nihongosensei123/" target="_blank" rel="noopener" style="display:inline-block;background:linear-gradient(135deg,#0891b2,#29abe2);color:white;font-weight:700;font-size:0.93rem;padding:11px 22px;border-radius:10px;text-decoration:none">📷 Instagramでお知らせを受け取る</a>
+
 <button onclick="document.getElementById('subModal').classList.remove('show')" style="background:#f1f5f9;color:#64748b;border:none;border-radius:10px;padding:11px 22px;font-size:0.88rem;font-weight:700;cursor:pointer;font-family:inherit">
 閉じる
 </button>
@@ -351,8 +356,8 @@ style="display:inline-block;background:linear-gradient(135deg,#0891b2,#29abe2);c
 <div class="qr-modal" id="lockedModal">
 <div class="qr-box" style="max-width:380px;width:94%">
 <div style="font-size:2rem;margin-bottom:8px">🔒</div>
-<h3 style="color:#0369a1;margin-bottom:6px">サブスク限定コンテンツ</h3>
-<p style="font-size:0.83rem;color:#64748b;margin-bottom:16px">このコンテンツは月額¥980のサブスクリプション登録で利用できます。</p>
+<h3 style="color:#0369a1;margin-bottom:6px">会員コースで公開予定</h3>
+<p style="font-size:0.83rem;color:#64748b;margin-bottom:16px">この課は会員コースで公開する予定です。いまは第1課・第4課を無料で学べます。</p>
 <div style="display:flex;gap:8px;justify-content:center;flex-wrap:wrap">
 <button onclick="document.getElementById('lockedModal').classList.remove('show');showSubModal()" style="background:linear-gradient(135deg,#0891b2,#29abe2);color:white;border:none;border-radius:10px;padding:11px 22px;font-size:0.9rem;font-weight:700;cursor:pointer;font-family:inherit">登録する →</button>
 <button onclick="document.getElementById('lockedModal').classList.remove('show')" style="background:#f1f5f9;color:#64748b;border:none;border-radius:10px;padding:11px 22px;font-size:0.88rem;font-weight:700;cursor:pointer;font-family:inherit">閉じる</button>
@@ -360,7 +365,7 @@ style="display:inline-block;background:linear-gradient(135deg,#0891b2,#29abe2);c
 </div>
 </div>
 <div class="community-wrap">
-<div style="background:white;border-radius:12px;border:1.5px solid #bae6fd;padding:12px 20px;margin-bottom:14px;display:flex;flex-wrap:wrap;gap:16px;justify-content:center;align-items:center">
+<div hidden style="background:white;border-radius:12px;border:1.5px solid #bae6fd;padding:12px 20px;margin-bottom:14px;display:flex;flex-wrap:wrap;gap:16px;justify-content:center;align-items:center">
 <div style="text-align:center">
 <div style="font-size:1.4rem;font-weight:700;color:#0891b2" id="stat-learners">—</div>
 <div style="font-size:0.72rem;color:#64748b">今週の学習者</div>
@@ -428,17 +433,17 @@ style="display:inline-block;background:linear-gradient(135deg,#0891b2,#29abe2);c
 <div style="font-size:0.7rem;color:#64748b">学習した日数</div>
 </div>
 </div>
-<div style="margin-top:10px">
+<div style="margin-top:10px" hidden>
 <div style="font-size:0.75rem;color:#64748b;margin-bottom:6px">ニックネーム（ランキング用）</div>
 <div style="display:flex;gap:6px">
-<input type="text" id="nickname-input" placeholder="例：Naomi" maxlength="12"
+<input type="text" id="nickname-input" placeholder="例：Taro" maxlength="12"
 style="flex:1;padding:7px 10px;border-radius:8px;border:1.5px solid #bae6fd;font-size:0.85rem;font-family:inherit">
 <button onclick="saveNickname()" style="padding:7px 14px;border-radius:8px;border:none;background:#0891b2;color:white;font-size:0.78rem;font-weight:700;cursor:pointer;font-family:inherit">保存</button>
 </div>
 </div>
 </div>
 </div>
-<div class="community-card">
+<div class="community-card" hidden>
 <div class="community-card-header">🏆 今週のランキング</div>
 <div class="community-card-body">
 <div id="ranking-list">
@@ -599,7 +604,7 @@ style="flex:1;padding:7px 10px;border-radius:8px;border:1.5px solid #bae6fd;font
 <div style="font-size:0.83rem;opacity:0.85">🔒 有料コンテンツ</div>
 <div style="font-size:1.2rem;font-weight:700;margin-top:4px">第5課 依頼メール</div>
 <div style="font-size:0.88rem;opacity:0.9;margin-top:4px">丁寧な依頼・催促・断り方</div>
-<a href="#" style="color:#065f46">💳 ¥1,980 で購入する</a>
+<span style="color:#065f46;opacity:.8">会員コースで公開予定</span>
 <div style="font-size:0.73rem;opacity:0.7;margin-top:8px">Stripe決済対応</div>
 </div>
 <div class="preview-notice" style="background:#f0fdf4;border-bottom:1px solid #bbf7d0;color:#065f46">
@@ -635,7 +640,7 @@ style="flex:1;padding:7px 10px;border-radius:8px;border:1.5px solid #bae6fd;font
 <div style="font-size:0.83rem;opacity:0.85">🔒 有料コンテンツ</div>
 <div style="font-size:1.2rem;font-weight:700;margin-top:4px">第6課 お詫びメール</div>
 <div style="font-size:0.88rem;opacity:0.9;margin-top:4px">謝罪・トラブル対応・フォロー</div>
-<a href="#" style="color:#7c2d12">💳 ¥1,980 で購入する</a>
+<span style="color:#7c2d12;opacity:.8">会員コースで公開予定</span>
 <div style="font-size:0.73rem;opacity:0.7;margin-top:8px">Stripe決済対応</div>
 </div>
 <div class="preview-notice" style="background:#fff1f2;border-bottom:1px solid #fecdd3;color:#991b1b">
@@ -1048,7 +1053,7 @@ style="flex:1;padding:7px 10px;border-radius:8px;border:1.5px solid #bae6fd;font
 <h3 style="font-size:0.97rem;font-weight:700;color:#0e7bb8;margin-bottom:16px">認定書の情報を入力してください</h3>
 <div style="margin-bottom:12px">
 <label style="font-size:0.82rem;color:#475569;font-weight:700;display:block;margin-bottom:4px">お名前（ローマ字）</label>
-<input type="text" id="cert-name-en" placeholder="例：Naomi Taoda" style="width:100%;padding:10px 14px;border-radius:10px;border:1.5px solid #bae6fd;font-size:0.93rem;font-family:inherit;box-sizing:border-box">
+<input type="text" id="cert-name-en" placeholder="例：Taro Yamada" style="width:100%;padding:10px 14px;border-radius:10px;border:1.5px solid #bae6fd;font-size:0.93rem;font-family:inherit;box-sizing:border-box">
 </div>
 <div style="margin-bottom:12px">
 <label style="font-size:0.82rem;color:#475569;font-weight:700;display:block;margin-bottom:4px">お名前（漢字・カタカナ）</label>
@@ -1073,7 +1078,12 @@ style="flex:1;padding:7px 10px;border-radius:8px;border:1.5px solid #bae6fd;font
 <footer>
 <div class="teacher">ビジネス会話 完全版</div>
 <p style="margin-top:6px;font-size:0.74rem">🔊 音声はWeb Speech API使用 / Chrome・Edgeで最適に動作します</p>
-<p class="copy">© 2025 垰田直美 「ビジネス会話 完全版」All rights reserved. 無断転載・複製を禁じます。</p>
+<p style="margin-top:10px;font-size:0.8rem;line-height:2">📚 ほかのサイト・講座：
+<a href="https://claude.ai/artifact/LBSmAmg3PSs3w6wK4crVPy" target="_blank" rel="noopener" style="color:#0369a1">Nihongo Michi（ひらがな〜JLPT N1・無料）</a> ・
+<a href="https://nanaatu1372-lab.github.io/yasashinihongo/" target="_blank" rel="noopener" style="color:#0369a1">にほんご LIFE（生活の日本語・無料）</a> ・
+<a href="https://www.udemy.com/course/13-noadr/" target="_blank" rel="noopener" style="color:#0369a1">介護福祉士 国試対策（Udemy・有料）</a> ・
+<a href="https://www.instagram.com/nihongosensei123/" target="_blank" rel="noopener" style="color:#0369a1">Instagram</a></p>
+<p class="copy">© 2025 Nihongo Michi 「ビジネス会話 完全版」All rights reserved. 無断転載・複製を禁じます。</p>
 <p style="margin-top:10px;font-size:0.75rem">
 <a href="cancel.html" style="color:#94a3b8;text-decoration:underline">サブスクリプションの解約はこちら</a>
 　|　
@@ -1818,13 +1828,7 @@ if(!el) return;
 // Simulated ranking data + user's own entry
 const nickname = userStats.nickname || '匿名ユーザー';
 const myWords = userStats.totalWords || 0;
-const simulatedUsers = [
-{name:'Linh', words: 48},
-{name:'Wei',  words: 35},
-{name:'Mina', words: 29},
-{name:'Ahmad',words: 22},
-{name:'Sofia',words: 15},
-];
+const simulatedUsers = [];
 // Insert user
 const allUsers = [...simulatedUsers, {name: nickname + '（あなた）', words: myWords, isMe: true}];
 allUsers.sort((a,b) => b.words - a.words);
@@ -1862,10 +1866,11 @@ const totalWords = userStats.totalWords || 0;
 const streak = userStats.streak || 0;
 const studyDays = (userStats.studyDates||[]).length;
 // Simulate community stats
-const communityLearners = 47 + Math.floor(Math.random()*5);
-const communityWords = 1842 + totalWords;
-const topStreak = Math.max(streak, 12);
-const todayLearners = 8 + Math.floor(Math.random()*4);
+// community numbers are not shown (no real data yet)
+const communityLearners = '—';
+const communityWords = '—';
+const topStreak = '—';
+const todayLearners = '—';
 document.getElementById('stat-learners').textContent = communityLearners;
 document.getElementById('stat-words').textContent = communityWords.toLocaleString();
 document.getElementById('stat-streak-top').textContent = topStreak;
@@ -1903,6 +1908,9 @@ recordStudyDay();
 const style = document.createElement('style');
 style.textContent = '@keyframes slideIn{from{transform:translateX(100px);opacity:0}to{transform:translateX(0);opacity:1}}';
 document.head.appendChild(style);
+// ══ FREE START ══
+function startFree(ev){try{ev.preventDefault();}catch(e){}
+ const t=document.querySelector('.lesson-tab');if(t){t.click();t.scrollIntoView({behavior:'smooth',block:'start'});}}
 // ══ SUBSCRIPTION SYSTEM ══
 let isSubscribed = false;
 // Check localStorage for subscription status
@@ -2410,7 +2418,7 @@ ${nameJp?`<div class="cert-name-jp">${nameJp}</div>`:''}
 <div class="cert-date">発行日 / Date<br><strong>${dateStr}</strong></div>
 <div>
 <div style="font-size:0.73rem;color:#64748b;margin-bottom:18px;text-align:right">ビジネス会話完全版</div>
-<div class="cert-sign-name">垰田直美</div>
+<div class="cert-sign-name">Nihongo Michi</div>
 <div class="cert-sign-title">日本語講師 / Japanese Language Instructor</div>
 </div>
 </div>
